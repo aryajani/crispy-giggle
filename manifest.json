@@ -1,0 +1,31 @@
+{
+"name": "Extension with GAPI tutorial",
+"version": "1.0",
+"description": "Uses OAuth to connect to Google's Spreadsheet API",
+"manifest_version": 2,
+"browser_action": {
+    "default_title": "GAPI Tutorial"
+ },
+"background": {
+    "page": "background.html",
+    "persistent": false
+},
+"key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0J2ZBkRlNLttudGRZGCVRRQrHhYWMw9nZSat2l5OB94Q21nxuuGRMydL0uQNutYeb4BOt/ZnyYnwBqbVeAHx6lBjV4TNJJtRfQKqT7QHAZsuG4hKfo5XNzpB7ImE8BNr3g3PH7WUXL9XraGMy+r0p3m1+wtcLiJ5qG0+fsW/DvZqMQH1Vnp0iwA/FM5P6iq2ESoqXcN7zMdqoSatkzgNQcfVvszke5mhFEHco2E0ANHhiXInZeA6ZPFNn7vOyqoVSZRhTpog8xhHO0FAKzuW5/4u+X5bp44WS61EoaQER/DoSTezwmb6Rt1ELCYd8dOvEtUJpLafC/HImsatQFWeFwIDAQAB",
+"oauth2": {
+    "client_id": "155835288526-k9pubhot3ebqf3hc8unpk8buq4e1sbvf.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/spreadsheets"]
+      },
+    "permissions": ["identity"],
+    "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+    "content_scripts": [
+        {
+          "matches": [
+            "https://bumbu.me/*"
+          ],
+          "js": [
+            "inject.js"
+          ],
+          "run_at": "document_end"
+        }
+      ]
+}
