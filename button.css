@@ -22,6 +22,26 @@ h1 {
   height: 120px;
 }
 
+.box2{
+  display: flex;
+  border: 1px solid black;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+
+img{
+  height: 134px;  
+  width: 104px;
+}
+
+#close-CSS {
+  background-image: url(g.webp);
+  background-size: 100px 30px;
+  height: 34px;  
+  width: 104px;
+}
+
 button.current {
   box-shadow: 0 0 0 2px white,
               0 0 0 4px black;
