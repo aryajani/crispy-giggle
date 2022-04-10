@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+  color: purple;
+}
+
+.scroll {
+  display: block;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 5px;
+  width: 270px;
+  height: 700px;
+  border-radius: 7px;
+  overflow-y: scroll;
+}
+
+.box {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  width: auto;
+  height: 120px;
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
